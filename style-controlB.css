@@ -11,7 +11,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    
 }
 
 /* Header */
@@ -42,8 +42,18 @@ header nav ul {
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 15px;
+    margin-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.4); /* Borda branca sutil com opacidade */
+}
+
+/* Remove a borda do último item para o visual ficar limpo */
+header nav ul li:last-child {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
 }
 
 header nav ul li a {
@@ -54,14 +64,13 @@ header nav ul li a {
 
 /* Main Content - Detalhes do Produto Principal */
 .product-detail {
-    background-color: white;
+    background-color: rgb(11, 15, 51);
     padding: 30px;
-    margin-top: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     display: flex;
     flex-wrap: wrap; /* Permite quebrar em telas menores */
     gap: 30px;
+    width: 100%;
 }
 
 .product-image {
@@ -84,20 +93,20 @@ header nav ul li a {
 
 .product-title {
     font-size: 2.2em;
-    color: #0056b3;
+    color: #378ce6;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .product-category {
     font-size: 0.9em;
-    color: #666;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
 .product-price .current-price {
     font-size: 2.5em;
-    color: #e67e22; /* Laranja */
+    color: #ffffff; /* Laranja */
     font-weight: bold;
     display: block;
     margin-bottom: 20px;
@@ -107,6 +116,7 @@ header nav ul li a {
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 25px;
+    color: #ddd;
 }
 
 .add-to-cart-btn {
@@ -137,7 +147,7 @@ header nav ul li a {
 
 .product-features h3 {
     font-size: 1.5em;
-    color: #0056b3;
+    color: #3a8ee7;
     margin-bottom: 10px;
 }
 
@@ -150,6 +160,7 @@ header nav ul li a {
 .product-features ul li {
     margin-bottom: 8px;
     font-size: 1em;
+    color: #ddd;
 }
 
 /* Nova Seção: Produtos em Destaque */
